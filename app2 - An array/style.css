@@ -1,0 +1,33 @@
+.row {
+	background-color: rgba(211, 212, 106, 0.29);
+	width: 100%;
+}
+.personData {
+	width: 16%;
+	display: inline-block;
+	font-family: "Times New Roman"
+	font-size: 12px;
+}
+
+.personEmail {
+	width: 40%;
+	display: inline-block;
+	font-family: "Times New Roman"
+	font-size: 12px;
+}
+
+.header {
+	width: 16%;
+	display: inline-block;
+	text-decoration:underline;
+	font-family: "Arial";
+	font-size: 18px;
+}
+
+.headerEmail {
+	width: 40%;
+	display: inline-block;
+	text-decoration:underline;
+	font-family: "Arial";
+	font-size: 18px;
+}

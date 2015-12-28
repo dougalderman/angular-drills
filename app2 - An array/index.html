@@ -1,0 +1,27 @@
+<html ng-app="arrayApp">
+	<head>
+		<link rel="stylesheet" href="style.css"></link>
+	</head>
+
+	<body ng-controller="arrayController">
+		<div class="row">
+			<p class="header">Name</p>
+			<p class="headerEmail">Email</p>
+			<p class="header">Date Employed</p>
+			<p class="header">Phone Number</p>
+			<br>
+		</div>
+		<div class = "row" ng-repeat="person in personArray">
+			<p class="personData">{{person.name}}</p>
+			<p class="personEmail">{{person.email}}</p>
+			<p class="personData">{{person.dateEmployed}}</p>
+			<p class="personData">{{person.phone}}</p>
+			<br>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+		<script src="app.js"></script>
+		<script src="controller.js"></script>
+		<script src="service.js"></script>
+	</body>
+</html>
