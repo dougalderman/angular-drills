@@ -1,7 +1,15 @@
 <html ng-app="apiApp">
-	<body>
-		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<header>
+		<title>Get the Blogger.com BLOG</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</header>
+	<body ng-controller="apiController">
+
+
+		<input type = "text" ng-model="blogURL" placeholder="Enter BLOG URL to view (omit http://)">
+		<button ng-click="getTheBlog(blogURL)">Get Blog</button>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
