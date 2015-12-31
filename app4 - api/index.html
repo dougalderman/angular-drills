@@ -5,9 +5,27 @@
 	</header>
 	<body ng-controller="apiController">
 
+		<h1>Get the Blogger.com BLOG</h1>
 
-		<input type = "text" ng-model="blogURL" placeholder="Enter BLOG URL to view (omit http://)">
+		<h3>Enter Blogger.com URL (must be in the format xxxx.blogspot.com)</h3>
+		http://
+		<input type = "text" ng-model="blogURL" placeholder="Enter BLOG URL to view">
 		<button ng-click="getTheBlog(blogURL)">Get Blog</button>
+
+		<div>
+			<p>Blog name: <span class="results1">{{blog.name}}</span> </p>
+			<p>Year Blog originally published: <span class="results1">{{year}}</span></p>
+			<p>Total number of posts: <span class="results1">{{blog.posts.totalItems}}</span></p>
+			<button  ng-click="getPosts()">Click here to get lastest posts</button>
+		</div>
+
+		<div ng-repeat="post in posts">
+			<p>Date of post: <span class="results1">{{post.published}}</span></p>
+			<p>Title of post: <span class="results1">{{post.title}}</span></p>
+			<br>
+			<p ng-bind-html="renderHtml(post.content)"></p>
+			<br><br><br>
+		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
